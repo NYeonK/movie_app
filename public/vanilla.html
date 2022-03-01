@@ -1,0 +1,29 @@
+<!--
+    *javascript을 이용*
+
+    1. HTML를 만듬 
+    2. javascript에서 가져옴
+    3. event를 감지함
+    4. 데이터를 update
+    5. HTML를 업데이트해야 함.
+    => 작업량이 많아지면 코드만들기 힘들어짐
+-->
+
+<!DOCTYPE html>
+<html>
+  <body>
+      <span>Total clicks : 0</span>
+      <button id="btn">Click me</button>
+  </body>
+  <script>
+      let counter = 0;
+      const button = document.getElementById("btn");
+      const span = document.querySelector("span");
+      function handleClick(){
+          counter = counter + 1;
+          span.innerText = `Total clicks : ${counter}`;
+      }
+      button.addEventListener("click",handleClick);
+  </script>
+</html>
+
